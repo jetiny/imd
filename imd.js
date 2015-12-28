@@ -64,7 +64,7 @@ function getListPage(words, page, next) {
 			pageInfo.totalPage = page;
 			pageInfo.nextPage = false;
 			if (pageInfo.lists.length * page < pageInfo.total) { //多页
-				pageInfo.nextPage = page +1;
+				pageInfo.nextPage = +page +1;
 				pageInfo.totalPage = Math.round(pageInfo.total/pageInfo.lists.length);
 			}
 		} catch(errs) {
